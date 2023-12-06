@@ -423,10 +423,6 @@ span{
         order: 2;
     }
 
-    /* .button.secondary {
-        border: 0;
-    } */
-
     .button a {
         padding: 7.5px 15px;
         background: #0F3F6F;
@@ -434,23 +430,10 @@ span{
         border-radius: 5px;
     }
 
-    /* .button.secondary a {
-        background: #006d6d;
-    } */
-
     .button a:hover {
         text-decoration: none;
         transition: all .25s;
     }
-
-    /* .button:not(.secondary) a:hover {
-        background: #006d6d;
-        border-color: #005959;
-    }
-
-    .button.secondary a:hover {
-        color: #005959;
-    } */
 }
 
 /* Mobile size menu */
