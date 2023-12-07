@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <ul class="menu">
+            <li class="logo"><a href="index.html"><img src="1.svg" alt=""></a></li>
+            <li class="item button"><a class="menua" href="index.html">Pathology</a></li>
+            <li class="item button"><a class="menua" href="#sherbimet">Sherbimet</a></li>
+            <li class="item button"><a class="menua" href="">About us</a></li>
+            <li class="item button"><a class="menua" href="">Contact us</a></li>
+            <li class="item button"><a class="menua" href="">Login</a></li>
+            <li class="toogle"><span class="bars"></span></li>
+        </ul>
+    </div>
+
+    <div class="about-content">
+        <div class="box-3-4">
+            <div class="box3">
+                <h2 class="per-ne">Për <br>ne;</h2>
+            </div>
+            <div class="box4">
+                <p>
+                    dlkad
+                </p>
+                <button class="contact-button"><a href=""></a>More</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about-content">
+        <div class="box-3-4">
+            <div class="box3">
+                <h2 class="per-ne">Për <br>ne;</h2>
+            </div>
+            <div class="box4">
+                <p>
+                    dlkad
+                </p>
+                <button class="contact-button"><a href=""></a>More</button>
+            </div>
+        </div>
+    </div>
+
+
+    <h1 id="sherbimert" style="display: flex; justify-content: center; margin-top: 150px; margin-bottom: 50px; border-radius: 10px;">Shërbimet Laboratorike</h1>
+    <div class="sherbimet">
+        <div class="content">
+            <div class="content-image">
+                <img src="" alt="">
+            </div>
+            <div class="content-text">
+                <p>Prof.Dr.Ass.Labinot Shahini</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-image">
+                <img src="" alt="">
+            </div>
+            <div class="content-text">
+                Dr.Valon Cena
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-image">
+                <img src="" alt="">
+            </div>
+            <div class="content-text">
+                <p>teknike Luljeta Krasniqi</p>
+        </div>
+        <div class="content">
+            <div class="content-image">
+                <img src="" alt="">
+            </div>
+            <div class="content-text">
+                <p>teknike Luljeta Krasniqi</p>
+        </div>
+    </div>
+
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="Profa.jpg" alt="" width="100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="Stafi.jpg" alt="" width="100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="MarreveshjaMeSuhareken.jpg" alt="" width="100%">
+        </div>
+
+
+        <a class="prev" onclick="plusSlides(-1)"><</a>
+        <a class="prev" onclick="plusSlides(-1)">></a>
+    </div>
+
+    <br>
+
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <div class="footer">
+        <div class="hr"></div>
+
+        <div class="footer-style">
+            <span class="span-style">© All rights reserved 2023</span>
+        </div>
+    </div>
+
+
+    <script>
+        $(function(){
+            $(".toggle").on("click", function(){
+                $(" .item").toggleClass("active");
+            });
+        });
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n){
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n){
+            showSlides(slideIndex - n);
+        }
+
+        function showSlides(n){
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if(n>slides.length) {slideIndex = 1}
+            if(n < 1) {slideIndex = slideS.length}
+            for (i = 0; i< sldies.length; i++){
+                slides[i].style.display = " none ";
+            }
+            for(i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+</body>
+</html>
