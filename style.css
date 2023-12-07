@@ -20,7 +20,7 @@ body{
     0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12); ;
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .menu{
@@ -78,9 +78,9 @@ a:hover{
 }
 
 
-.toggle {
+/* .toggle {
     cursor: pointer;
-}
+} */
 
 .bars {
     background: #02084B; 
@@ -582,6 +582,16 @@ img{
         margin-top: 20px;
   }
 
+  .contact-button{
+    background-color: #0F3F6F;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 20%;
+    height: 100%;
+}
   .trust-content{
     display: flex;
     flex-direction: column;
@@ -691,5 +701,8 @@ img{
     margin-bottom: 20px;
   }
 
+  .contact-2{
+    width: 100%;
+  }
   
 }
