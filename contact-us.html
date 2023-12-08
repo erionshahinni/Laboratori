@@ -14,6 +14,38 @@
             });
         });
 
+    function validateForm(){
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+    
+            let nameRegex = /^[A-Z][a-z]{3,8}$/;
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+
+            if (!nameRegex.test(name)) {
+                document.getElementById('emailError').innerText = 'Emrin.';
+                return;
+            } 
+    
+
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').innerText = 'Please enter a valid email address.';
+                return;
+            } 
+
+            if (message.trim() === '') {
+                document.getElementById('messageError').innerText = 'Please enter your message.';
+                return;
+            } else {
+                document.getElementById('messageError').innerText = '';
+            }
+    
+           
+            alert('Form submitted successfully!');
+        }
+
+
     </script>
 </head>
 <body>
@@ -31,38 +63,40 @@
 
 
 
-    <div class="contact-content">
-        <div class="bashkohuni"><span style="font-size: 30pt; color: white;">Bashkohuni me ne</span></div>
+    <div class="contact-content" id="contact-content">
+        <div class="bashkohuni"><span style="font-size: 30pt; color: white; ;">Bashkohuni me ne</span></div>
             <div class="contact-1-2">
                 <div class="contact-1">
                     <h2>Na <br> kontaktoni;</h2>
-                    <div class="contact 1-1">
-                        <h3>+383 (45) 111 111</h3>
-                        <h3>info@pathology.com</h3>
-                        <a href=""></a><img src="" alt="">
-                        <a href=""></a><img src="" alt="">
-                        <a href=""></a><img src="" alt="">
-                        <a href=""></a><img src="" alt="">
+                        <div class="contact-1-1">
+                            <h3 style="margin-top: 15px;">+383 (45) 111 111</h3>
+                            <h3 style="margin-top: 15px;">info@pathology.com</h3>
+                            <a href=""></a><img src="facebook.svg" alt="" width="50px" height="100px" style="margin-right: 5px;">
+                            <a href=""></a><img src="facebook.svg" alt="" width="50px" height="100px" style="margin-right: 5px;">
+                            <a href=""></a><img src="facebook.svg" alt="" width="50px" height="100px" style="margin-right: 5px;">
+                            <a href=""></a><img src="facebook.svg" alt="" width="50px" height="100px" style="margin-right: 5px;">
+                        </div>
                     </div>
-                </div>
                 <div class="contact-2">
-                    <form id="contact-form">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message"style="height: 230px; width:100%;" required></textarea>
-                        
+                    <form id="contactForm" onsubmit="validateForm(); return false;">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <div id="nameError" class="error-message"></div>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <div id="emailError" class="error-message"></div>
+                        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                        <div id="messageError" class="error-message"></div>
                         <button type="submit">Submit</button>
                     </form>
                 </div>
+                
             </div>
-    </div>
+        </div>
+        </div>
 
+
+
+
+         </div>
 
 
     <div class="footer">
