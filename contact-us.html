@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $(".toggle").on("click", function() {
+                $(".item").toggleClass("active");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <ul class="menu">
+            <li class="logo"><a href="index.html"><img src="images/1.svg" alt="" width="165px" height="75px"></a></li>
+            <li class="item button"><a class="menua" href="index.html">Pathology</a></li>
+            <li class="item button"><a class="menua" href="#sherbimet">Sherbimet</a></li>
+            <li class="item button"><a class="menua" href="about-us.html">Rreth nesh</a></li>
+            <li class="item button"><a class="menua" href="contact-us.html">Contact us</a></li>
+            <li class="item button "><a class="menua" href="login.html">Login</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </div>
+
+
+
+    <div class="contact-content">
+        <div class="bashkohuni"><span style="font-size: 30pt; color: white;">Bashkohuni me ne</span></div>
+            <div class="contact-1-2">
+                <div class="contact-1">
+                    <h2>Na <br> kontaktoni;</h2>
+                    <div class="contact 1-1">
+                        <h3>+383 (45) 111 111</h3>
+                        <h3>info@pathology.com</h3>
+                        <a href=""></a><img src="" alt="">
+                        <a href=""></a><img src="" alt="">
+                        <a href=""></a><img src="" alt="">
+                        <a href=""></a><img src="" alt="">
+                    </div>
+                </div>
+                <div class="contact-2">
+                    <form id="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message"style="height: 230px; width:100%;" required></textarea>
+                        
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="hr"></div>
+
+        <div class="footer-style">
+            <span class="span-style">© All rights reserved 2023</span>
+        </div>
+    </div>
+</body>
+</html>
