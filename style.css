@@ -483,6 +483,60 @@ img{
     animation-duration: 1.5s;
 }
 
+.login-content{
+   display: flex;
+   flex-direction: row;
+   color: #02084B;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   align-content: space-around;
+   height: 100%;
+   margin-bottom: 100px;
+  }
+  
+  .login2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+    float: left;
+    font-size: 15pt;
+    color: #02084B;
+    border-radius: 30px;
+    box-shadow: 6px 9px 20px -3px rgba(78, 78, 78, 0.66);
+    background-color: white;
+    padding: 15px 0 15px 0;
+  }
+  .login1{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin:20px 20px 20px 10px;
+    font-size: 20px;
+    height: 380px;
+    width:40%;
+    margin-left: 100px;
+  
+  }
+  
+  .login-1-2{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin-top: 100px;
+    border-radius: 30px;
+    box-shadow: 6px 9px 20px -3px rgba(78, 78, 78, 0.66);
+    background-color: #F5F5F5;
+  }
+
 @keyframes fade{
     from{opacity: 4;}
     to{opacity: 1;}
@@ -703,6 +757,28 @@ img{
 
   .contact-2{
     width: 100%;
+  }
+ .login-container{
+    width: 100%;
+  }
+
+  .login2{
+    width: 90%;
+    margin-top: 40px;
+  }
+  
+  .login-1-2{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+  }
+   .login1{
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
   }
   
 }
