@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            background-color: #0F3F6F;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul class="menu">
+            <li class="logo"><a href="index.html"><img src="1.svg" alt="" width="100px" height="50px" style="box-shadow: rgba(100, 100, 10, 0.2) 0px 7px 29px 0px;" ></a></li>
+            <li class="item button"><a class="menua" href="index.html">Pathology</a></li>
+            <li class="item button"><a class="menua" href="#sherbimet">Sherbimet</a></li>
+            <li class="item button"><a class="menua" href="about-us.html">Rreth nesh</a></li>
+            <li class="item button"><a class="menua" href="contact-us.html">Contact us</a></li>
+            <li class="item button "><a class="menua" href="login.html">Login</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </div>
+
+<div class="login-container">
+    <div class="login-1-2">
+        <div class="login1">
+            <img src="f.svg" alt="ClientTrust" width="80px">
+            <img src="logo-gmail.png" alt="ClientTrust" width="80px">
+            </div>
+    <div class="login2">
+        <h2>Sign up</h2>
+    <form id="loginForm" onsubmit="validateForm(); return false;">
+        <input type="text" id="name" placeholder="Name" required>
+        <div id="nameError" class="error-message"></div>
+        <input type="text" id="surname" placeholder="Surname" required>
+        <div id="surnameError" class="error-message"></div>
+        <input type="text" id="email" placeholder="Email" required>
+        <div id="emailError" class="error-message"></div>
+        <input type="password" id="password" placeholder="Password" required>
+        <div id="passwordError" class="error-message"></div>
+        <button type="submit" class="contact-button" style="width: 70px; height: 30px;">Login</button>
+        <div class="signup-link">
+            <p>Already have an account? <a class="signup" href="login.html">Login</a></p>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+
+<script>
+     function validateForm() {
+
+
+        let name = document.getElementById('name').value;
+        let surname = document.getElementById('surname').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+
+
+        let nameRegex =  /^[A-Z][a-z]{3,8}$/;
+        let surnameRegex =  /^[A-Z][a-z]{3,8}$/;
+        let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+        let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+
+        if (!nameRegex.test(name)) {
+            document.getElementById('nameError').innerText = 'Name error.';
+            return;
+        } else {
+            document.getElementById('nameError').innerText = '';
+        }
+
+        if (!surnameRegex.test(surname)) {
+            document.getElementById('surnameError').innerText = 'Surname error.';
+            return;
+        } else {
+            document.getElementById('surnameError').innerText = '';
+        }
+
+        if (!emailRegex.test(email)) {
+            document.getElementById('emailError').innerText = 'Email error.';
+            return;
+        } else {
+            document.getElementById('emailError').innerText = '';
+        }
+
+        if (!passwordRegex.test(password)) {
+            document.getElementById('passwordError').innerText = 'Password must be at least 6 characters long and include at least one lowercase letter, one uppercase letter, and one digit.';
+            return;
+        } else {
+            document.getElementById('passwordError').innerText = '';
+        }
+
+
+        alert('Signup successful!');
+    }
+
+    $(function() {
+            $(".toggle").on("click", function() {
+                $(".item").toggleClass("active");
+            });
+        });
+</script>
+
+</body>
+</html>

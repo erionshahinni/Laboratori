@@ -494,6 +494,10 @@ img{
    height: 100%;
    margin-bottom: 100px;
   }
+
+  .signup{
+    color: #0F3F6F;
+  }
   
   .login2{
     display: flex;
